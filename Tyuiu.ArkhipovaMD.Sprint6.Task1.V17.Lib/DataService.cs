@@ -8,7 +8,7 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task1.V17.Lib
             double[] function = new double[stopValue-startValue+1];
             for (int i = 0; i < function.Length; i++)
             {
-                function[i] = Math.Round((3*startValue)/(Math.Sin(startValue)-3+startValue)+2,2);
+                function[i] = Math.Round((3*startValue-1.5)/(Math.Sin(startValue)-3+startValue)+2,2);
                 startValue++;
             }
             return function;
