@@ -85,6 +85,7 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task0.V7
             groupBoxInput_AMD.TabIndex = 1;
             groupBoxInput_AMD.TabStop = false;
             groupBoxInput_AMD.Text = "Ввод данных";
+            groupBoxInput_AMD.Enter += groupBoxInput_AMD_Enter;
             // 
             // textBoxInput_AMD
             // 

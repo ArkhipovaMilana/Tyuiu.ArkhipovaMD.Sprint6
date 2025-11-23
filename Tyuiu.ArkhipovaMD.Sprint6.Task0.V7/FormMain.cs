@@ -17,11 +17,11 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task0.V7
             DataService ds = new DataService();
             try
             {
-                textBoxOutput_AMD.Text = Convert.ToString(ds.Calculate(Convert.ToInt32(textBoxInput_AMD.Text)));
+                textBoxOutput_AMD.Text = Convert.ToString(ds.Calculate(Convert.ToInt32(inputBoxInput_AMD.Text)));
             }
             catch
             {
-                MessageBox.Show("Ошибка");
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -34,6 +34,11 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task0.V7
         }
 
         private void textBoxOutput_AMD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxInput_AMD_Enter(object sender, EventArgs e)
         {
 
         }
