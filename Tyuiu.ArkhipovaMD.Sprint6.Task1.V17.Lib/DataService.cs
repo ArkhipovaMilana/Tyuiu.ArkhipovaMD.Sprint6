@@ -9,6 +9,7 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task1.V17.Lib
             for (int i = 0; i < function.Length; i++)
             {
                 function[i] = Math.Round((3*startValue)/(Math.Sin(startValue)-3+startValue)+2,2);
+                startValue++;
             }
             return function;
         }
