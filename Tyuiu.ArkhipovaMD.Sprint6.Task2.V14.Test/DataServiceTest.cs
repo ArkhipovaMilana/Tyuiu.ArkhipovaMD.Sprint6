@@ -8,9 +8,9 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task2.V14.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            double[] res = ds.GetMassFunction(0, 0);
+            double[] res = ds.GetMassFunction(-5, 5);
             double exp = 3;
-            Assert.AreEqual(res[0],exp);
+            Assert.AreEqual(res[5],exp);
         }
     }
 }
