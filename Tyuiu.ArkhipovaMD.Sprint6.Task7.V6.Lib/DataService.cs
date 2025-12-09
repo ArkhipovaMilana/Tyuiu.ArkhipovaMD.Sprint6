@@ -26,7 +26,7 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task7.V6.Lib
                 }
             }
 
-            int xRow = 7;
+            int xRow = 6;
 
             for (int c = 0; c < columns; c++)
             {
