@@ -26,13 +26,13 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task7.V6.Lib
                 }
             }
 
-            int xCol = 5;
+            int xCol = 7;
 
             for (int r = 0; r < rows; r++)
             {
                 for (int c = xCol; c <= xCol; c++)
                 {
-                    if (arrayValues[r, c] !=6)
+                    if (arrayValues[c,r] !=6)
                     {
                         arrayValues[r, c] = 0;
                     }
