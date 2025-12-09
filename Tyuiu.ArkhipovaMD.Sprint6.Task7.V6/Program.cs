@@ -1,4 +1,3 @@
-using Tyuiu.ArkhipovaMD.Sprint6.Task7.V6.Lib;
 namespace Tyuiu.ArkhipovaMD.Sprint6.Task7.V6
 {
     internal static class Program
@@ -13,7 +12,6 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task7.V6
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FormMain());
-            DataService ds = new DataService();
         }
     }
 }
