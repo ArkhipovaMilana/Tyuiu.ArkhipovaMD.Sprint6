@@ -15,12 +15,12 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task6.V29.Lib
                 {
                     if (liter == 'i')
                     {
-                        answer+=$"{word}";
+                        answer+=$"{word} ";
                         break;
                     }
                 }
             }
-            return answer;
+            return answer.TrimEnd();
         }
     }
 }
