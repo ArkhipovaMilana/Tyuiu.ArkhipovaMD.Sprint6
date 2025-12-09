@@ -6,21 +6,51 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task5.V29.Lib
     {
         public double[] LoadFromDataFile(string path)
         {
-            string text = File.ReadAllText(path);
-            string[] sdata = text.Split(new char[] { ' ', '\t', '\n', '\r' },
-                                StringSplitOptions.RemoveEmptyEntries);
-            List<double> data = new List<double>();
-            for (int i = 0; i < sdata.Length; i++)
+            int rows;
+            int columns;
+            string fileData = File.ReadAllText(path);
+
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            rows = lines.Length;
+            columns = lines[0].Split(';').Length;
+
+            double[,] arrayValues = new double[rows, columns];
+
+            for (int r = 0; r < rows; r++)
             {
-                if (double.TryParse(sdata[i], out double value))
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < columns; c++)
                 {
-                    if (value >= 10)
+                    arrayValues[r, c] = Convert.ToDouble(line_r[c]);
+                }
+            }
+
+            int xRow = 6;
+
+            for (int c = 0; c < columns; c++)
+            {
+                for (int r = xRow; r <= xRow; c++)
+                {
+                    if (arrayValues[c, r] !=6)
                     {
-                        data.Add(value);
+                        arrayValues[r, c] = 0;
                     }
                 }
             }
-            return data.ToArray();
+            double[] ans = new double[rows*columns];
+            int i = 0;
+            for (int c = 0;c<columns;c++)
+            {
+                for (int r = 0;r < rows; r++)
+                {
+                    ans[i] = arrayValues[r, c];
+                    i++;
+                }
+            }
+
+            return ans;
         }
     }
 }
