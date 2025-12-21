@@ -78,12 +78,13 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task7.V6
             // 
             // buttonSave_AMD
             // 
-            buttonSave_AMD.Location = new Point(183, 12);
+            buttonSave_AMD.Location = new Point(174, 12);
             buttonSave_AMD.Name = "buttonSave_AMD";
             buttonSave_AMD.Size = new Size(75, 23);
             buttonSave_AMD.TabIndex = 4;
             buttonSave_AMD.Text = "save";
             buttonSave_AMD.UseVisualStyleBackColor = true;
+            buttonSave_AMD.Click += buttonSave_AMD_Click;
             // 
             // openFileDialog_AMD
             // 

@@ -70,5 +70,42 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task7.V6
                 }
             }
         }
+
+        private void buttonSave_AMD_Click(object sender, EventArgs e)
+        {
+            openFileDialogSave_AMD.FileName = "OutputFileTask7.csv";
+            openFileDialogSave_AMD.InitialDirectory= Directory.GetCurrentDirectory();
+            openFileDialogSave_AMD.ShowDialog();
+            
+            string path = openFileDialogSave_AMD.FileName;
+            FileInfo fileinfo = new FileInfo(path);
+            bool fileexists = fileinfo.Exists;
+            if (fileexists)
+            {
+                File.Delete(path);
+            }
+
+            int rows = dataGridViewOutput_AMD.RowCount;
+            int cols = dataGridViewOutput_AMD.ColumnCount;
+
+            string str = "";
+
+            for (int i = 0;i < rows;i++)
+            {
+                for ( int j = 0; j < cols;j++)
+                {
+                    if (j!=cols-1)
+                    {
+                        str = str + dataGridViewOutput_AMD.Rows[i].Cells[j].Value + ";";
+                    }
+                    else
+                    {
+                        str = str + dataGridViewOutput_AMD.Rows[i].Cells[j].Value;
+                    }
+                }
+            }
+            File.AppendAllText(path,str+ Environment.NewLine);
+            str = "";
+        }
     }
 }
