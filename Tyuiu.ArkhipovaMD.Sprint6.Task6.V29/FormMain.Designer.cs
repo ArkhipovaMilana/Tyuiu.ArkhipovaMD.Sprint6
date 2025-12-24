@@ -79,6 +79,7 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task6.V29
             buttonInfo_AMD.Size = new Size(66, 63);
             buttonInfo_AMD.TabIndex = 2;
             buttonInfo_AMD.UseVisualStyleBackColor = true;
+            buttonInfo_AMD.Click += buttonInfo_AMD_Click;
             // 
             // buttonDo_AMD
             // 

@@ -35,11 +35,11 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task2.V14
             textBoxStart_AMD = new TextBox();
             groupBox3 = new GroupBox();
             dataGridView_AMD = new DataGridView();
+            X = new DataGridViewTextBoxColumn();
+            F = new DataGridViewTextBoxColumn();
             buttonHelp_AMD = new Button();
             buttonDo_AMD = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            X = new DataGridViewTextBoxColumn();
-            F = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -95,7 +95,7 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task2.V14
             groupBox3.Controls.Add(dataGridView_AMD);
             groupBox3.Location = new Point(443, 12);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(633, 426);
+            groupBox3.Size = new Size(155, 426);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Вывод данных";
@@ -109,6 +109,20 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task2.V14
             dataGridView_AMD.RowHeadersVisible = false;
             dataGridView_AMD.Size = new Size(140, 398);
             dataGridView_AMD.TabIndex = 0;
+            // 
+            // X
+            // 
+            X.HeaderText = "X";
+            X.Name = "X";
+            X.ReadOnly = true;
+            X.Width = 70;
+            // 
+            // F
+            // 
+            F.HeaderText = "F(X)";
+            F.Name = "F";
+            F.ReadOnly = true;
+            F.Width = 70;
             // 
             // buttonHelp_AMD
             // 
@@ -130,25 +144,11 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task2.V14
             buttonDo_AMD.UseVisualStyleBackColor = true;
             buttonDo_AMD.Click += buttonDo_AMD_Click;
             // 
-            // X
-            // 
-            X.HeaderText = "X";
-            X.Name = "X";
-            X.ReadOnly = true;
-            X.Width = 70;
-            // 
-            // F
-            // 
-            F.HeaderText = "F(X)";
-            F.Name = "F";
-            F.ReadOnly = true;
-            F.Width = 70;
-            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1088, 450);
+            ClientSize = new Size(611, 450);
             Controls.Add(buttonDo_AMD);
             Controls.Add(buttonHelp_AMD);
             Controls.Add(groupBox3);

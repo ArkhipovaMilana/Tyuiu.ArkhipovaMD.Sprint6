@@ -25,16 +25,18 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task7.V6.Lib
                     arrayValues[r, c] = Convert.ToInt32(line_r[c]);
                 }
             }
-
+            
             int xRow = 6;
-
-            for (int c = 0; c < columns; c++)
+            if (xRow < rows)
             {
-                for (int r = xRow; r <= xRow; r++)
+                for (int c = 0; c < columns; c++)
                 {
-                    if (arrayValues[r,c] !=6)
+                    for (int r = xRow; r <= xRow; r++)
                     {
-                        arrayValues[r, c] = 0;
+                        if (arrayValues[r, c] != 6)
+                        {
+                            arrayValues[r, c] = 0;
+                        }
                     }
                 }
             }

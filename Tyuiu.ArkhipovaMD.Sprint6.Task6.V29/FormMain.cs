@@ -23,5 +23,10 @@ namespace Tyuiu.ArkhipovaMD.Sprint6.Task6.V29
         {
             textBoxOut_AMD.Text = ds.CollectTextFromFile(filepath);
         }
+
+        private void buttonInfo_AMD_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Таск 1 выполнила студентка группы АСОиУб-25-1 Архипова М. Д.", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
